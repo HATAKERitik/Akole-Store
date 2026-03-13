@@ -1,0 +1,55 @@
+﻿Server started on port 5000
+node : PRODUCT CREATION ERROR:  
+PrismaClientKnownRequestError: 
+At line:1 char:56
++ ... e -ErrorAction 
+SilentlyContinue; node server.js > 
+server_log.txt 2>&1
++                                   
+   
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+    + CategoryInfo          : NotSp 
+   ecified: (PRODUCT CREATIO...nRe  
+  questError: :String) [], Remote   
+ Exception
+    + FullyQualifiedErrorId : Nativ 
+   eCommandError
+ 
+Invalid `prisma.product.create()` 
+invocation in
+C:\Users\91997\Desktop\New folder 
+(3)\routes\products.js:35:46
+
+  32     ? 
+JSON.stringify(req.files.map(file 
+=> `/uploads/${file.filename}`))
+  33     : null;
+  34 
+ΓåÆ 35 const product = await 
+prisma.product.create(
+The column `imageUrls` does not 
+exist in the current database.
+    at $n.handleRequestError 
+(C:\Users\91997\Desktop\New folder (
+3)\node_modules\@prisma\client\runti
+me\library.js:121:7315)
+    at $n.handleAndLogRequestError 
+(C:\Users\91997\Desktop\New folder (
+3)\node_modules\@prisma\client\runti
+me\library.js:121:6623)
+    at $n.request 
+(C:\Users\91997\Desktop\New folder (
+3)\node_modules\@prisma\client\runti
+me\library.js:121:6307)
+    at async l 
+(C:\Users\91997\Desktop\New folder (
+3)\node_modules\@prisma\client\runti
+me\library.js:130:9633)
+    at async 
+C:\Users\91997\Desktop\New folder 
+(3)\routes\products.js:35:25 {
+  code: 'P2022',
+  clientVersion: '5.22.0',
+  meta: { modelName: 'Product', 
+column: 'imageUrls' }
+}
